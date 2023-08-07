@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap");
 body {
   font-family: "Source Sans 3", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
+  margin: 0;
 }
-
+/* Custom styles for the footer */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px 0;
+}
+/* Hover effect on nav links*/
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffc107;
+  transition: 0.3s;
+}
 /* Custom font size classes for different breakpoints */
 @media (min-width: 300px) {
   .fs-sm-custom {
@@ -22,7 +33,36 @@ body {
     font-size: 20px;
   }
 }
+/* media query for about me*/
 
+@media (max-width: 574px) {
+  .col-xsm-custom {
+    width: 8em;
+  }
+  .col-xxsm-custom {
+    width: 24em;
+  }
+}
+
+/* Hover effect on nav links*/
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffc107;
+  transition: 0.5s;
+}
+
+.navbar-brand:hover {
+  color: #ffc107;
+  transition: 0.6s;
+}
+
+.nav > li .nav-link {
+  color: #000000;
+}
+
+.nav > li .nav-link:hover {
+  color: #ffc107; /* Change to your desired background color */
+}
 
 /* Landing page styles*/
 
@@ -35,13 +75,66 @@ body {
     url(../images/common-bg.svg);
   background-size: cover;
   background-position: center;
-  min-height: 90vh;
+  min-height: 110vh;
+  width: 100.8%;
 }
 
-#landing-page-icons{
+#landing-page-icons {
   font-size: 28px;
 }
 
-#lead-p{
+#lead-p {
   font-weight: 400;
+}
+
+/* Animated Scroll Animation */
+
+.scroll-mouse {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  width: 25px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  animation: scrollAnimation 1.5s infinite;
+}
+
+.scroll-mouse .wheel {
+  width: 4px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+@keyframes scrollAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.scroll-mouse-container:hover .scroll-mouse {
+  opacity: 1;
+}
+
+.heading-sec_main::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  margin-top: 3.5rem;
+  width: 2rem;
+  background: #ffc107;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
 }
