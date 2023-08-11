@@ -13,7 +13,13 @@ body {
 /* Hover effect on nav links*/
 .navbar-nav .nav-item .nav-link:hover {
   color: #ffc107;
-  transition: 0.3s;
+  transition: 0.4s;
+}
+
+
+.nav > li .nav-link:hover {
+  color: #ffc107; /* Change to your desired background color */
+  transition: 0.4s;
 }
 /* Custom font size classes for different breakpoints */
 @media (min-width: 300px) {
@@ -58,10 +64,6 @@ body {
 
 .nav > li .nav-link {
   color: #000000;
-}
-
-.nav > li .nav-link:hover {
-  color: #ffc107; /* Change to your desired background color */
 }
 
 /* Landing page styles*/

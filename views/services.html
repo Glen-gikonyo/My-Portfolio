@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../images/AI_profile-fotor-20230727225350.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg shadow fixed-top bg-white" style="font-weight: 700">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-lg-5 ms-sm-1 fs-sm-custom fs-md-custom fs-lg-custom" href="#">
+                <img src="../images/AI_profile-fotor-20230727225350.png" height="50rem" alt="profilrPic" />
+                GLEN GIKONYO
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link me-5" aria-current="page" href="../views/index.html" target="_blank"
+                        rel="noopener">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="../views/index.html#about" target="_blank" rel="noopener">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="../views/index.html#projects" target="_blank"
+                        rel="noopener">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-5" href="../views/index.html#contact" target="_blank"
+                        rel="noopener">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mt-5" id="services" style="background-image: linear-gradient(
+    to right,
+    rgba(245, 245, 245, 0.8),
+    rgba(245, 245, 245, 0.8)
+  ),
+    url(../images/common-bg.svg);
+    background-size: cover;
+    background-position: center;
+    min-height: 145vh;
+    width: 100%;">
+        <div class="px-3 py-5 text-center">
+            <h1 class="display-6 fw-bold">
+                <span class="heading-sec_main">SERVICES</span>
+            </h1>
+            <div class="col-lg-6 mx-auto mt-5">
+                <p class="lead fs-sm-custom fs-md-custom fs-lg-custom text-secondary" style="font-weight: 500">
+                    Feel free to fill in the form to get a price depending on the specifications you want for your
+                    website.
+                </p>
+            </div>
+        </div>
+        <form
+            class="col-xxsm-custom shadow bg-white p-5 rounded-3 container col-lg-7 d-flex flex-column justify-content-center">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label ">Name</label>
+                <input placeholder="Enter Your Name" type="text" class="form-control bg-body-secondary p-3"
+                    id="name" aria-describedby="emailHelp" />
+            </div>
+            <div class="mb-3">
+                <label for="pages" class="form-label">Number of pages:</label>
+                <input type="number" class="form-control bg-body-secondary p-3 mb-3" id="pages" min="1"
+                    placeholder="Enter the number of pages">
+            </div>
+            <div class="mb-3">
+                <label for="additionalServices" class="form-label">Additional Services:</label>
+                <br>
+                <select class="form-select bg-body-secondary p-3 mb-3" id="additionalServices">
+                    <option value="0">None</option>
+                    <option value="5000">Hosting</option>
+                    <option value="3000">Domain Registration</option>
+                    <option value="7000">Maintenance</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="" class="mb-2 form-label">Choose preference:</label>
+                <br>
+                <input type="checkbox" name="form-check-input" id="ecommerce">
+                <label for="ecommerce" class="form-check-label">E-commerce</label>
+            </div>
+            <div class="mb-3">
+                <input type="checkbox" name="form-check-input" id="responsive">
+                <label for="ecommerce" class="form-check-label">Responsive Design</label>
+            </div>
+
+            <button type="button" class="btn btn-warning col-lg-3 col-sm-4" onclick="calculatePrice()">Calculate
+                Price</button>
+            <div id="totalPrice" class="mt-4 text-center fw-bold"></div>
+        </form>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>GLEN GIKONYO</h4>
+                    <p>A Frontend focused Web Developer building the Frontend of Websites
+                        and Web Applications that leads to the success of the overall
+                        product.</p>
+                </div>
+                <div class="col-md-6 text-lg-end text-sm-start">
+                    <h4 style="margin-right: 3.7em;">SOCIALS</h4>
+                    <a href="https://github.com/Glen-gikonyo?tab=repositories" target="_blank" rel="noopener"><i
+                            class="bi bi-github text-white me-3" style="font-size: 25px"></i></a>
+                    <a href="www.linkedin.com/in/glen-gikonyo-141805234" target="_blank" rel="noopener"><i
+                            class="bi bi-linkedin text-white me-3" style="font-size: 25px"></i></a>
+                    <a href="https://twitter.com/GikonyoGlen" target="_blank" rel="noopener"><i
+                            class="bi bi-twitter text-white me-3" style="font-size: 25px"></i></a>
+                    <a href="https://www.facebook.com/glen.gikonyo.1" target="_blank" rel="noopener"><i
+                            class="bi bi-facebook text-white me-3" style="font-size: 25px"></i></a>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">© 2023 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../Functions/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
